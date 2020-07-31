@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.render.pdfcore.engine.view.PDFToolbar
+        android:id="@+id/pdf_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dl_pdf_menu_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+
+        <com.render.pdfcore.engine.view.PDFRecyclerView
+            android:id="@+id/rv_pdf_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_content" />
+
+        <com.render.pdfcore.engine.view.PDFRecyclerView
+            android:id="@+id/rv_pdf_menu"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/bg_menu" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>
